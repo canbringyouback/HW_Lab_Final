@@ -1,0 +1,95 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Dec  3 21:47:04 2024
+| Host         : LAPTOP-QOAL8JRE running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    26 |
+| Unused register locations in slices containing registers |    93 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            4 |
+|      4 |            5 |
+|      7 |            3 |
+|      8 |            5 |
+|      9 |            6 |
+|    16+ |            3 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              27 |           13 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              36 |            9 |
+| Yes          | No                    | No                     |              81 |           27 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              43 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------+----------------------------------------------+---------------------------------+------------------+----------------+
+|     Clock Signal    |                 Enable Signal                |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++---------------------+----------------------------------------------+---------------------------------+------------------+----------------+
+|  CLK50MHZ_BUFG      | uut/db_clk/clear                             |                                 |                1 |              1 |
+|  CLK50MHZ_BUFG      | uut/db_data/O_i_1__0_n_0                     |                                 |                1 |              1 |
+|  CLK50MHZ_BUFG      | uut/db_clk/O_i_1_n_0                         |                                 |                1 |              1 |
+|  CLK50MHZ_BUFG      | uut/db_data/Iv_i_1__0_n_0                    |                                 |                1 |              1 |
+| ~uut/db_clk/O_reg_0 |                                              | uut/cnt[3]_i_1_n_0              |                1 |              4 |
+|  clk_IBUF_BUFG      | echo_module2/receiver/shift_reg[9]_i_1_n_0   | echo_module2/receiver/running0  |                1 |              4 |
+|  clk_IBUF_BUFG      | echo_module2/transmitter/count               | echo_module2/transmitter/p_0_in |                1 |              4 |
+|  clk_IBUF_BUFG      | get_tx/count                                 | get_tx/p_0_in                   |                1 |              4 |
+|  clk_IBUF_BUFG      | get_tx/E[0]                                  |                                 |                1 |              4 |
+|  clk_IBUF_BUFG      | echo_module2/transmitter/E[0]                |                                 |                2 |              7 |
+|  clk_IBUF_BUFG      | echo_module2/transmitter/start_tx_reg[0]     |                                 |                6 |              7 |
+|  CLK50MHZ_BUFG      | uut/db_data/count[6]_i_1__0_n_0              | uut/db_data/Iv_i_1__0_n_0       |                2 |              7 |
+|  clk_IBUF_BUFG      | uut/E[0]                                     |                                 |                1 |              8 |
+|  clk_IBUF_BUFG      | echo_module2/receiver/running5_out           |                                 |                4 |              8 |
+|  clk_IBUF_BUFG      | get_tx/running_reg_2[0]                      |                                 |                1 |              8 |
+|  CLK50MHZ_BUFG      | uut/dataprev0                                |                                 |                1 |              8 |
+|  CLK50MHZ_BUFG      | uut/dataprev0                                | uut/keycode[8]                  |                2 |              8 |
+| ~uut/db_clk/O_reg_0 |                                              |                                 |                3 |              9 |
+|  clk_IBUF_BUFG      |                                              |                                 |                6 |              9 |
+|  clk_IBUF_BUFG      | echo_module2/receiver/shift_reg[9]_i_1_n_0   |                                 |                2 |              9 |
+|  clk_IBUF_BUFG      | echo_module2/transmitter/shift[8]_i_1__0_n_0 |                                 |                2 |              9 |
+|  clk_IBUF_BUFG      | get_tx/shift[8]_i_1_n_0                      |                                 |                3 |              9 |
+|  CLK50MHZ_BUFG      |                                              |                                 |                4 |              9 |
+|  clk_IBUF_BUFG      |                                              | echo_module2/transmitter/p_0_in |                4 |             16 |
+|  clk_IBUF_BUFG      |                                              | get_tx/p_0_in                   |                4 |             16 |
+|  clk_IBUF_BUFG      | echo_module2/receiver/running_reg_n_0        | echo_module2/receiver/running0  |                5 |             16 |
++---------------------+----------------------------------------------+---------------------------------+------------------+----------------+
+
+
