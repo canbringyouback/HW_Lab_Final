@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.runs/impl_1'
+HD_PWD='C:/Users/oatchula/Desktop/HWLabFinal/project_2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

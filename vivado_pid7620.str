@@ -1,0 +1,81 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 7620
+License: Customer
+
+Current time: 	Thu Dec 05 09:24:18 ICT 2024
+Time zone: 	Indochina Time (Asia/Bangkok)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 2880x1800
+Screen resolution (DPI): 192
+Available screens: 1
+Available disk space: 156 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=24
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xillinx2/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Xillinx2/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	oatchula
+User home directory: C:/Users/oatchula
+User working directory: C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/New folder (6)/HWLabFinal
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xillinx2/Vivado
+HDI_APPROOT: C:/Xillinx2/Vivado/2018.3
+RDI_DATADIR: C:/Xillinx2/Vivado/2018.3/data
+RDI_BINDIR: C:/Xillinx2/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/oatchula/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/oatchula/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/oatchula/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Xillinx2/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/New folder (6)/HWLabFinal/vivado.log
+Vivado journal file location: 	C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/New folder (6)/HWLabFinal/vivado.jou
+Engine tmp dir: 	C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/New folder (6)/HWLabFinal/.Xil/Vivado-7620-LAPTOP-QOAL8JRE
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xillinx2/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Xillinx2/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xillinx2/Vivado/2018.3
+XILINX_SDK: C:/Xillinx2/SDK/2018.3
+XILINX_VIVADO: C:/Xillinx2/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Xillinx2/Vivado/2018.3
+
+
+GUI allocated memory:	159 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 613 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// HOptionPane Error: 'Can't open project 'project_2'. Please verify that the project still exists. (Open Project)'
+selectButton("PAResourceOtoP.PABaseTab_CANT_OPEN_PROJECT_PLEASE_VERIFY_OK", "OK"); // JButton (C, I)
+// HMemoryUtils.trashcanNow. Engine heap size: 613 MB. GUI used memory: 62 MB. Current time: 12/5/24, 9:24:20 AM ICT
+// WARNING: HEventQueue.dispatchEvent() is taking  1004 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1013 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1014 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1003 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1004 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.

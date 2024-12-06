@@ -18,28 +18,40 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/oatchula/Desktop/HWLabFinal/project_2.cache/wt [current_project]
+set_property parent.project_path C:/Users/oatchula/Desktop/HWLabFinal/project_2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo {c:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+read_mem {
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/font_bitmap.mem
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/number.mem
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/symbol.mem
+}
 read_verilog -library xil_defaultlib {
-  {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/sources_1/PS2Receiver.v}
-  {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/sources_1/bin2ascii.v}
-  {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/sources_1/debouncer.v}
-  {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/sources_1/uart_buf_con.v}
-  {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/sources_1/new/uart_rx.v}
-  {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/sources_1/new/uart_translate.v}
-  {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/sources_1/uart_tx.v}
-  {C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/sources_1/top.v}
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/PS2Receiver.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/bin2ascii.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/clockDiv.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/debouncer.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/hexTo7Segment.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/ps2_to_ascii.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/switch_to_ascii.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_buf_con_2.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_rx.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_translate.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/uart_tx.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/vga_display.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/vga_sync.v
+  C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -49,8 +61,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/constrs_1/Basys3_Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.srcs/constrs_1/Basys3_Master.xdc}}]
+read_xdc C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/constrs_1/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/constrs_1/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

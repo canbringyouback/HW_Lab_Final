@@ -1,7 +1,8 @@
 module uart_translate(
     input       clk,      // Clock signal
     input       RsRx,     // UART receive line
-    output      tx        // UART transmit line
+    output      tx,
+    output reg [7:0] buffer=0      // UART transmit line
 );
     // Internal signals for UART receiver
     wire [7:0] received_data;  // Data received from external UART
@@ -87,6 +88,7 @@ module uart_translate(
 
                 // Trigger transmission of the keypress character
                 if(key_char!=8'h3F) begin transmit_data <= key_char;
+                buffer<=key_char;
                 start_tx <= 1'b1;
                 end
             end
