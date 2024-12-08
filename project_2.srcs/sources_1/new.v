@@ -1,4 +1,4 @@
-module top (
+module top2 (
     input         clk,       // System clock (e.g., 100MHz)
     input         PS2Data,   // PS2 keyboard data line
     input         PS2Clk,    // PS2 keyboard clock line
@@ -12,12 +12,13 @@ module top (
     output dp,
     output [3:0] an,
     output [3:0] vgaRed, vgaGreen, vgaBlue,
-    output Hsync, Vsync       // UART transmit line for second channel
+    output Hsync, Vsync, output  led,led2       // UART transmit line for second channel
 );
     // Declare an input signal to write to the buffer
-    reg [7:0] data_in;         // Single character data input
-    reg write_enable;          // Signal to enable buffer updates
-
+    reg [8:0] data_in;         // Single character data input
+    reg write_enable;
+              // Signal to enable buffer updates
+ assign led = sw[8];
     // Instantiate the VGA display module
     vga_display display(
         .color({vgaRed, vgaGreen, vgaBlue}),
@@ -29,7 +30,8 @@ module top (
     );
 
 
-    wire        ready1, ready2;
+    wire        ready1, ready2,ready3;
+    reg         ready4=0;
     wire        tstart_ps2;
     wire        tstart_sw;
     wire [31:0] tbuf_ps2;
@@ -37,8 +39,10 @@ module top (
     wire [7:0]  tbus;
     wire        tstart1, tstart2;
     wire        tx3;
-    wire [7:0] O;
+    wire [8:0] O;
     wire an0,an1,an2,an3;
+    reg [8:0] O1=0;
+    
     assign an={an3,an2,an1,an0};
 
         wire targetClk;
@@ -63,69 +67,82 @@ module top (
     );
 
     // Switch to ASCII instance
-    switch_to_ascii switch_to_ascii_inst (
-        .clk(clk),
-        .BTNC(btnC),
-        .sw(sw),
-        .start(tstart_sw),
-        .tbuf(tbuf_sw)
-    );
+   // switch_to_ascii switch_to_ascii_inst (
+     //   .clk(clk),
+     //   .BTNC(btnC),
+      //  .sw(sw),
+      //  .start(tstart_sw),
+     //  .tbuf(tbuf_sw)
+    //);
 
     // UART transmit controller with dual buffer handling
-    uart_buf_con_2 tx_con2 (
-        .clk    (clk),
-        .bcount (5),
-        .tbuf1  (tbuf_ps2),
-        .tbuf2  (tbuf_sw),  
-        .start1 (tstart_ps2),
-        .start2 (tstart_sw),
-        .ready  (ready),
-        .tstart (tstart), 
-        .tready (tready),  // Ready signal for first UART transmitter
-        .tbus   (tbus)
-    );
+   // uart_buf_con_2 tx_con2 (
+    //    .clk    (clk),
+    //    .bcount (5),
+     //   .tbuf1  (tbuf_ps2),
+     //   .tbuf2  (tbuf_sw),  
+      //  .start1 (tstart_ps2),
+      //  .start2 (tstart_sw),
+      //  .ready  (ready),
+      //  .tstart (tstart), 
+      //  .tready (tready),  // Ready signal for first UART transmitter
+     //   .tbus   (tbus)
+   // );
 
+  
     // Logic to separate tstart1 and tstart2 based on sw[15]
 
 
     // UART transmitter 1
-    uart_tx get_tx (
-        .clk    (clk),
-        .start  (tstart),  // Active only when sw[15] == 0
-        .tbus   (tbus),
-        .tx     (tx2),
-        .ready  (tready)
-    );
-
-    // UART transmitter 2
    
+    // UART transmitter 2
+     // Synchronizer
+    wire [7:0] d,notd,d2,notd2;
+    genvar n;
+    generate for(n=0;n<8;n=n+1) begin
+        dFlipflop dFF2(d2[n],notd2[n],sw[n],targetClk);
+        dFlipflop dFF(d[n],notd[n],d2[n],targetClk);
+    end endgenerate
+    
+    ////////////////////////////////////////
+    // Single Pulser
+ wire push,pop,reset;
+    singlePulser(push, btnC, clk);
 
     // Echo UART module for second channel
     uart_translate echo_module2 (
         .clk(clk),
-        .RsRx(RsRx2),   // Internal wire tx3 connected as input RsRx 
-        .tx(tx),
-        .buffer(O)//Echoed data transmitted here
-    );
-  reg [7:0] write_enable_count=48; // Counter for write_enable assertion
-
+        .RsRx(RsRx2),
+        .use_external_input(sw[15]),
+        .external_key_char(sw[7:0]),
+        .uppercase(sw[8]),
+        .sw_input(push),   // Internal wire tx3 connected as input RsRx 
+        .tx(tx2),
+        .internal(sw[14]),
+        .external(sw[13]),
+        .mirror(sw[12]),
+        .tstart(tstart_ps2),
+        .internal_buffer(tbuf_ps2[7:0]),
+        .buffer(O)
+        );
+        
 always @(posedge clk) begin
     if (O != data_in) begin
         data_in = O;         // Update data_in with new character
         write_enable = 1'b1; // Enable buffer update for one clock cycle
     end else begin
         write_enable <= 1'b0; // Disable write on subsequent cycles
+    end  
     end
-
-    // Increment the counter when write_enable is 1
-    if (write_enable) begin
-        write_enable_count <= write_enable_count + 1;
-    end
-end
-
-
     
-    quadSevenSeg q7seg(seg,dp,an0,an1,an2,an3, write_enable_count,sw[7:0],O,data_in,targetClk);
-    
-    
+  wire [7:0] ascii_k = 8'h4B; // ASCII for 'K'
+    wire [7:0] ascii_s = 8'h53; // ASCII for 'S'
+    wire [7:0] ascii_m = 8'h4D; // ASCII for 'M'
+    wire [7:0] ascii_d = 8'h44;
+  // Register to store the previous value of tbuf_ps2
+  reg [7:0] display_data;  
+
+
+          // Ready signal           // Ready signal feedback
+quadSevenSeg q7seg(seg,dp,an0,an1,an2,an3, sw[7:0],O,,data_in,targetClk);
 endmodule

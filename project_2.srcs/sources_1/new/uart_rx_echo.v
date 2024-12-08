@@ -1,7 +1,8 @@
 module uart_rx_echo(
     input       clk,      // Clock signal
     input       RsRx,     // UART receive line
-    output      tx        // UART transmit line
+    output      tx, 
+    output reg [7:0] buffer=0       // UART transmit line
 );
     // Internal signals for UART receiver
     wire [7:0] received_data; // Data received from external UART
@@ -37,6 +38,7 @@ module uart_rx_echo(
         if (data_ready && ready_tx && !data_consumed) begin
             start_tx <= 1'b1;
             transmit_data <= received_data;
+            buffer<=received_data;
             data_consumed <= 1'b1; // Mark data as consumed
         end else begin
             start_tx <= 1'b0;

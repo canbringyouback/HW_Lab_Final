@@ -1,5 +1,23 @@
 `timescale 1ns / 1ps
-
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 08/30/2021 09:05:23 PM
+// Design Name: 
+// Module Name: quadSevenSeg
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 
 module quadSevenSeg(
@@ -9,30 +27,30 @@ module quadSevenSeg(
     output an1,
     output an2,
     output an3,
-    input [3:0] num0, 
-    input [3:0] num1,
-    input [3:0] num2,
-    input [3:0] num3, 
+    input [7:0] num0, // most right
+    input [7:0] num1,
+    input [7:0] num2,
+    input [7:0] num3, // most left
     input clk
     );
     
-    reg [1:0] ns; 
-    reg [1:0] ps; 
-    reg [3:0] dispEn; 
+    reg [1:0] ns; // next stage
+    reg [1:0] ps; // present stage
+    reg [3:0] dispEn; // which 7seg is active
     
-    reg [3:0] hexIn;
+    reg [7:0] hexIn;
     wire [6:0] segments;
     assign seg=segments;
     
     hexTo7Segment segDecode(segments,hexIn);
-    assign dp=1; 
+    assign dp=1; // dot point corresponse with activated an
     assign {an3,an2,an1,an0}=~dispEn;
 
-
+    // state transition every clock
     always @(posedge clk)
         ps=ns;
     
-   
+    // 3 below sequences work parallelly
     always @(ps) 
         ns=ps+1;
     

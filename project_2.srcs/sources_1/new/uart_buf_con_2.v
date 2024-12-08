@@ -57,12 +57,12 @@ module uart_buf_con_2(
 
     always @(sel, pbuf) begin
         case (sel)
-            3'd1: tbus <= 8'd0;
+            3'd1: tbus <= 8'h0;
             3'd2: tbus <= 8'd0;
             3'd3: tbus <= pbuf[7:0];
-            3'd4: tbus <= 8'd0;
-            3'd5: tbus <= 8'd0;
-            3'd6: tbus <= 8'd0;
+            3'd4: tbus <= 8'h0;
+            3'd5: tbus <= 8'h0;
+            3'd6: tbus <= 8'h0;
             default: tbus <= 8'd0;
         endcase
     end

@@ -1,0 +1,1234 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Dec  8 23:07:18 2024
+# Process ID: 21716
+# Current directory: C:/Users/oatchula/Desktop/HWLabFinal/project_2.runs/synth_1
+# Command line: vivado.exe -log top2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top2.tcl
+# Log file: C:/Users/oatchula/Desktop/HWLabFinal/project_2.runs/synth_1/top2.vds
+# Journal file: C:/Users/oatchula/Desktop/HWLabFinal/project_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top2.tcl -notrace
+Command: synth_design -top top2 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24168 
+WARNING: [Synth 8-2301] loop variable declaration is not allowed in this mode of verilog [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:67]
+WARNING: [Synth 8-2301] loop variable declaration is not allowed in this mode of verilog [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:77]
+WARNING: [Synth 8-2301] loop variable declaration is not allowed in this mode of verilog [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:87]
+WARNING: [Synth 8-2301] loop variable declaration is not allowed in this mode of verilog [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:97]
+WARNING: [Synth 8-2301] loop variable declaration is not allowed in this mode of verilog [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:107]
+WARNING: [Synth 8-2611] redeclaration of ansi port clkdiv is not allowed [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/clockDiv.v:27]
+WARNING: [Synth 8-2611] redeclaration of ansi port segments is not allowed [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/hexTo7Segment.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 392.117 ; gain = 113.008
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top2' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clockDiv' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/clockDiv.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clockDiv' (1#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/clockDiv.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dFlipflop' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/dFlipflop.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dFlipflop' (2#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/dFlipflop.v:23]
+INFO: [Synth 8-6157] synthesizing module 'vga_display' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/displayMonitor/project_1.srcs/sources_1/new/vga_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_sync' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/vga_sync.v:23]
+	Parameter H_DISPLAY bound to: 640 - type: integer 
+	Parameter H_L_BORDER bound to: 48 - type: integer 
+	Parameter H_R_BORDER bound to: 16 - type: integer 
+	Parameter H_RETRACE bound to: 96 - type: integer 
+	Parameter H_MAX bound to: 799 - type: integer 
+	Parameter START_H_RETRACE bound to: 656 - type: integer 
+	Parameter END_H_RETRACE bound to: 751 - type: integer 
+	Parameter V_DISPLAY bound to: 480 - type: integer 
+	Parameter V_T_BORDER bound to: 10 - type: integer 
+	Parameter V_B_BORDER bound to: 33 - type: integer 
+	Parameter V_RETRACE bound to: 2 - type: integer 
+	Parameter V_MAX bound to: 524 - type: integer 
+	Parameter START_V_RETRACE bound to: 513 - type: integer 
+	Parameter END_V_RETRACE bound to: 514 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_sync' (3#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/vga_sync.v:23]
+WARNING: [Synth 8-350] instance 'vga_sync_unit' of module 'vga_sync' requires 8 connections, but only 7 given [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/displayMonitor/project_1.srcs/sources_1/new/vga_display.v:13]
+INFO: [Synth 8-6157] synthesizing module 'RgbRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:1]
+	Parameter CHAR_WIDTH bound to: 6 - type: integer 
+	Parameter CHAR_HEIGHT bound to: 7 - type: integer 
+	Parameter LINE_SPACE bound to: 15 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:123]
+	Parameter CHAR_WIDTH bound to: 6 - type: integer 
+	Parameter CHAR_HEIGHT bound to: 7 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'font_bitmap.mem' is read successfully [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:130]
+INFO: [Synth 8-6155] done synthesizing module 'CharRam' (4#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:123]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:29]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:30]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:41]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:42]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:53]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:29]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:30]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:41]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:42]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:53]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:29]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:30]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:41]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:42]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:53]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:29]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:30]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:41]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:42]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:53]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:29]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:30]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:41]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:42]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:53]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:29]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:30]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:41]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:42]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:53]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:29]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:30]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:41]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:42]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:53]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:29]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:30]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:41]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:42]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:53]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (8) of module 'CharRam' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'RgbRam' (5#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_display' (6#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/displayMonitor/project_1.srcs/sources_1/new/vga_display.v:1]
+WARNING: [Synth 8-689] width (9) of port connection 'char_in' does not match port width (8) of module 'vga_display' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:28]
+INFO: [Synth 8-6157] synthesizing module 'ps2_to_ascii' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/ps2_to_ascii.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/PS2Receiver.v:1]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/debouncer.v:23]
+	Parameter COUNT_MAX bound to: 99 - type: integer 
+	Parameter COUNT_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (7#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/debouncer.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/PS2Receiver.v:40]
+WARNING: [Synth 8-6014] Unused sequential element last_keycode_reg was removed.  [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/PS2Receiver.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (8#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/PS2Receiver.v:1]
+WARNING: [Synth 8-567] referenced signal 'keycodev' should be on the sensitivity list [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/ps2_to_ascii.v:30]
+INFO: [Synth 8-6157] synthesizing module 'bin2ascii' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/bin2ascii.v:23]
+	Parameter NBYTES bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bin2ascii' (9#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/bin2ascii.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_to_ascii' (10#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/ps2_to_ascii.v:1]
+INFO: [Synth 8-6157] synthesizing module 'singlePulser' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/singlePulser.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'singlePulser' (11#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/singlePulser.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_translate' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_translate.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_rx.v:1]
+	Parameter CD_MAX bound to: 109 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (12#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_rx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/uart_tx.v:23]
+	Parameter CD_MAX bound to: 108 - type: integer 
+	Parameter CD_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (13#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/uart_tx.v:23]
+WARNING: [Synth 8-6014] Unused sequential element uppercase_stable_reg was removed.  [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_translate.v:38]
+WARNING: [Synth 8-6014] Unused sequential element external_key_reg was removed.  [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_translate.v:66]
+WARNING: [Synth 8-6014] Unused sequential element caps_lock_reg was removed.  [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_translate.v:166]
+INFO: [Synth 8-6155] done synthesizing module 'uart_translate' (14#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_translate.v:1]
+WARNING: [Synth 8-350] instance 'echo_module2' of module 'uart_translate' requires 15 connections, but only 13 given [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:113]
+INFO: [Synth 8-6157] synthesizing module 'quadSevenSeg' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hexTo7Segment' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/hexTo7Segment.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hexTo7Segment' (15#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/hexTo7Segment.v:23]
+WARNING: [Synth 8-567] referenced signal 'num0' should be on the sensitivity list [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:65]
+WARNING: [Synth 8-567] referenced signal 'num1' should be on the sensitivity list [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:65]
+WARNING: [Synth 8-567] referenced signal 'num2' should be on the sensitivity list [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:65]
+WARNING: [Synth 8-567] referenced signal 'num3' should be on the sensitivity list [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'quadSevenSeg' (16#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:23]
+WARNING: [Synth 8-689] width (9) of port connection 'num2' does not match port width (8) of module 'quadSevenSeg' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:142]
+WARNING: [Synth 8-689] width (9) of port connection 'num3' does not match port width (8) of module 'quadSevenSeg' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:142]
+WARNING: [Synth 8-3848] Net tx in module/entity top2 does not have driver. [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:9]
+WARNING: [Synth 8-3848] Net led2 in module/entity top2 does not have driver. [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:15]
+WARNING: [Synth 8-3848] Net write_enable_count in module/entity top2 does not have driver. [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:142]
+INFO: [Synth 8-6155] done synthesizing module 'top2' (17#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:1]
+WARNING: [Synth 8-3331] design uart_translate has unconnected port use_external_input
+WARNING: [Synth 8-3331] design uart_translate has unconnected port keyboard[7]
+WARNING: [Synth 8-3331] design uart_translate has unconnected port keyboard[6]
+WARNING: [Synth 8-3331] design uart_translate has unconnected port keyboard[5]
+WARNING: [Synth 8-3331] design uart_translate has unconnected port keyboard[4]
+WARNING: [Synth 8-3331] design uart_translate has unconnected port keyboard[3]
+WARNING: [Synth 8-3331] design uart_translate has unconnected port keyboard[2]
+WARNING: [Synth 8-3331] design uart_translate has unconnected port keyboard[1]
+WARNING: [Synth 8-3331] design uart_translate has unconnected port keyboard[0]
+WARNING: [Synth 8-3331] design RgbRam has unconnected port x[1]
+WARNING: [Synth 8-3331] design RgbRam has unconnected port x[0]
+WARNING: [Synth 8-3331] design RgbRam has unconnected port y[1]
+WARNING: [Synth 8-3331] design RgbRam has unconnected port y[0]
+WARNING: [Synth 8-3331] design top2 has unconnected port tx
+WARNING: [Synth 8-3331] design top2 has unconnected port led2
+WARNING: [Synth 8-3331] design top2 has unconnected port RsRx
+WARNING: [Synth 8-3331] design top2 has unconnected port sw[11]
+WARNING: [Synth 8-3331] design top2 has unconnected port sw[10]
+WARNING: [Synth 8-3331] design top2 has unconnected port sw[9]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 444.141 ; gain = 165.031
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin vga_sync_unit:reset to constant 0 [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/displayMonitor/project_1.srcs/sources_1/new/vga_display.v:13]
+WARNING: [Synth 8-3295] tying undriven pin q7seg:num0[0] to constant 0 [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:142]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 444.141 ; gain = 165.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 444.141 ; gain = 165.031
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/constrs_1/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/constrs_1/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/constrs_1/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.148 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.215 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.215 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 788.215 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 788.215 ; gain = 509.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 788.215 ; gain = 509.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 788.215 ; gain = 509.105
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "buffer_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "running" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "bit_count" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "shift" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "running" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 788.215 ; gain = 509.105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |RgbRam__GB0      |           1|     35074|
+|2     |RgbRam__GB1      |           1|     15380|
+|3     |RgbRam__GB2      |           1|     12304|
+|4     |RgbRam__GB3      |           1|     21800|
+|5     |RgbRam__GB4      |           1|     34954|
+|6     |RgbRam__GB5      |           1|      9228|
+|7     |vga_display__GC0 |           1|      2568|
+|8     |top2__GC0        |           1|      4743|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 7     
+	   2 Input     16 Bit       Adders := 2     
+	   3 Input     13 Bit       Adders := 4     
+	   3 Input     12 Bit       Adders := 6     
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 15    
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 5     
+	               16 Bit    Registers := 4     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 45    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 54    
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 51    
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 41    
+	  51 Input      8 Bit        Muxes := 7     
+	   4 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 203   
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 79    
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 186   
+	  12 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top2 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module CharRam__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__12 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__13 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__14 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__15 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__17 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__18 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__19 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__20 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__21 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__22 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__23 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__24 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__25 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__26 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__27 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__28 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__29 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__30 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__31 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__33 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__34 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__35 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__36 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__37 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__38 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam__39 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module CharRam 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module RgbRam 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 7     
+	   3 Input     13 Bit       Adders := 4     
+	   3 Input     12 Bit       Adders := 6     
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 15    
+	   3 Input     10 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 10    
+Module vga_sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module vga_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 5     
+	                8 Bit    Registers := 40    
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 32    
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 161   
+Module clockDiv__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module debouncer__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module debouncer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module PS2Receiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 2     
+Module ps2_to_ascii 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module singlePulser 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 2     
+Module uart_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module uart_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module uart_translate 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 3     
+	  51 Input      8 Bit        Muxes := 7     
+	   2 Input      8 Bit        Muxes := 9     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 203   
+	   2 Input      6 Bit        Muxes := 77    
+	   2 Input      1 Bit        Muxes := 9     
+Module quadSevenSeg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+Module clockDiv__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__16 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__17 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv__18 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clockDiv 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dFlipflop 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "buffer_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "buffer_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2_to_ascii_inst/uut/db_clk/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2_to_ascii_inst/uut/db_clk/O" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2_to_ascii_inst/uut/db_data/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2_to_ascii_inst/uut/db_data/O" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design top2 has unconnected port tx
+WARNING: [Synth 8-3331] design top2 has unconnected port led2
+WARNING: [Synth 8-3331] design top2 has unconnected port RsRx
+WARNING: [Synth 8-3331] design top2 has unconnected port sw[11]
+WARNING: [Synth 8-3331] design top2 has unconnected port sw[10]
+WARNING: [Synth 8-3331] design top2 has unconnected port sw[9]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/\echo_module2/transmitter/shift_reg[10] )
+INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[6]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[7]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[5]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[4]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[3]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[2]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[1]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[0]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/echo_module2/transmitter/shift_reg[10]' (FDE) to 'i_0/echo_module2/transmitter/shift_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/\echo_module2/transmitter/shift_reg[9] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:40 . Memory (MB): peak = 788.215 ; gain = 509.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++--------------+--------------------------+---------------+----------------+
+|Module Name   | RTL Object               | Depth x Width | Implemented As | 
++--------------+--------------------------+---------------+----------------+
+|CharRam       | p_0_out                  | 8192x12       | LUT            | 
+|hexTo7Segment | segments                 | 256x7         | LUT            | 
+|CharRam       | p_0_out                  | 8192x12       | LUT            | 
+|CharRam       | p_0_out                  | 8192x12       | LUT            | 
+|CharRam       | p_0_out                  | 8192x12       | LUT            | 
+|top2          | q7seg/segDecode/segments | 256x7         | LUT            | 
++--------------+--------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |RgbRam__GB0      |           1|      8755|
+|2     |RgbRam__GB1      |           1|      3746|
+|3     |RgbRam__GB2      |           1|      2992|
+|4     |RgbRam__GB3      |           1|      6159|
+|5     |RgbRam__GB4      |           1|      9307|
+|6     |RgbRam__GB5      |           1|      2250|
+|7     |vga_display__GC0 |           1|      1562|
+|8     |top2__GC0        |           1|      1211|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:47 . Memory (MB): peak = 951.406 ; gain = 672.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:50 . Memory (MB): peak = 1000.613 ; gain = 721.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |RgbRam__GB0      |           1|      8719|
+|2     |RgbRam__GB1      |           1|      3746|
+|3     |RgbRam__GB2      |           1|      2992|
+|4     |RgbRam__GB3      |           1|      5164|
+|5     |RgbRam__GB4      |           1|      9219|
+|6     |RgbRam__GB5      |           1|      2250|
+|7     |vga_display__GC0 |           1|      1560|
+|8     |top2__GC0        |           1|      1192|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:55 . Memory (MB): peak = 1000.613 ; gain = 721.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:56 . Memory (MB): peak = 1000.613 ; gain = 721.504
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:57 . Memory (MB): peak = 1000.613 ; gain = 721.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 1000.613 ; gain = 721.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 1000.613 ; gain = 721.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:58 . Memory (MB): peak = 1000.613 ; gain = 721.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:58 . Memory (MB): peak = 1000.613 ; gain = 721.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |   731|
+|3     |LUT1   |   583|
+|4     |LUT2   |  1661|
+|5     |LUT3   |   495|
+|6     |LUT4   |   181|
+|7     |LUT5   |   749|
+|8     |LUT6   |  6721|
+|9     |MUXF7  |  2104|
+|10    |MUXF8  |   917|
+|11    |FDRE   |   893|
+|12    |FDSE   |     2|
+|13    |IBUF   |    17|
+|14    |OBUF   |    28|
+|15    |OBUFT  |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------------+---------------+------+
+|      |Instance                          |Module         |Cells |
++------+----------------------------------+---------------+------+
+|1     |top                               |               | 15087|
+|2     |  display                         |vga_display    | 12073|
+|3     |    ram                           |RgbRam         |   510|
+|4     |      \genblk1[0].charRam_inst_2  |CharRam        |    44|
+|5     |      \genblk1[0].charRam_inst_4  |CharRam_19     |    52|
+|6     |      \genblk1[4].charRam_inst_1  |CharRam_20     |    41|
+|7     |      \genblk1[4].charRam_inst_5  |CharRam_21     |    41|
+|8     |      \genblk1[5].charRam_inst_3  |CharRam_22     |    41|
+|9     |      \genblk1[5].charRam_inst_4  |CharRam_23     |    46|
+|10    |      \genblk1[5].charRam_inst_5  |CharRam_24     |    41|
+|11    |      \genblk1[6].charRam_inst_3  |CharRam_25     |    41|
+|12    |      \genblk1[6].charRam_inst_5  |CharRam_26     |    41|
+|13    |      \genblk1[7].charRam_inst_1  |CharRam_27     |    41|
+|14    |      \genblk1[7].charRam_inst_2  |CharRam_28     |    40|
+|15    |      \genblk1[7].charRam_inst_5  |CharRam_29     |    41|
+|16    |    vga_sync_unit                 |vga_sync       | 10207|
+|17    |  echo_module2                    |uart_translate |   190|
+|18    |    receiver                      |uart_rx        |    84|
+|19    |    transmitter                   |uart_tx        |    62|
+|20    |  fdivTarget                      |clockDiv       |     2|
+|21    |  \genblk1[0].fDiv                |clockDiv_0     |     2|
+|22    |  \genblk1[10].fDiv               |clockDiv_1     |     2|
+|23    |  \genblk1[11].fDiv               |clockDiv_2     |     2|
+|24    |  \genblk1[12].fDiv               |clockDiv_3     |     2|
+|25    |  \genblk1[13].fDiv               |clockDiv_4     |     2|
+|26    |  \genblk1[14].fDiv               |clockDiv_5     |     2|
+|27    |  \genblk1[15].fDiv               |clockDiv_6     |     2|
+|28    |  \genblk1[16].fDiv               |clockDiv_7     |     2|
+|29    |  \genblk1[17].fDiv               |clockDiv_8     |     2|
+|30    |  \genblk1[1].fDiv                |clockDiv_9     |     2|
+|31    |  \genblk1[2].fDiv                |clockDiv_10    |     2|
+|32    |  \genblk1[3].fDiv                |clockDiv_11    |     2|
+|33    |  \genblk1[4].fDiv                |clockDiv_12    |     2|
+|34    |  \genblk1[5].fDiv                |clockDiv_13    |     2|
+|35    |  \genblk1[6].fDiv                |clockDiv_14    |     2|
+|36    |  \genblk1[7].fDiv                |clockDiv_15    |     2|
+|37    |  \genblk1[8].fDiv                |clockDiv_16    |     2|
+|38    |  \genblk1[9].fDiv                |clockDiv_17    |     2|
+|39    |  nolabel_line110                 |singlePulser   |    18|
+|40    |  ps2_to_ascii_inst               |ps2_to_ascii   |   202|
+|41    |    uut                           |PS2Receiver    |    97|
+|42    |      db_clk                      |debouncer      |    21|
+|43    |      db_data                     |debouncer_18   |    22|
+|44    |  q7seg                           |quadSevenSeg   |    39|
+|45    |    segDecode                     |hexTo7Segment  |    31|
++------+----------------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:58 . Memory (MB): peak = 1000.613 ; gain = 721.504
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:53 . Memory (MB): peak = 1000.613 ; gain = 377.430
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:01:58 . Memory (MB): peak = 1000.613 ; gain = 721.504
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3752 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1000.613 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+248 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:02:02 . Memory (MB): peak = 1000.613 ; gain = 733.258
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1000.613 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/oatchula/Desktop/HWLabFinal/project_2.runs/synth_1/top2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top2_utilization_synth.rpt -pb top2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 23:09:24 2024...

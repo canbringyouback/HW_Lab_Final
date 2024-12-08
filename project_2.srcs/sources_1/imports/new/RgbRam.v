@@ -7,10 +7,10 @@ module RgbRam(output reg [11:0] color,
               input [63:0] character_5,
               input [9:0]START_CHAR_X,
               input [9:0]START_CHAR_Y
-              );  // รับข้อมูลตัวอักษร 8 ตัว
+              );  // ?????????????? 8 ???
 
-    localparam CHAR_WIDTH = 6;  // ความกว้างของตัวอักษร
-    localparam CHAR_HEIGHT = 7; // ความสูงของตัวอักษร
+    localparam CHAR_WIDTH = 6;  // ?????????????????
+    localparam CHAR_HEIGHT = 7; // ???????????????
 
 //    localparam START_CHAR_X = 27;
     localparam LINE_SPACE = 15;
@@ -21,7 +21,7 @@ module RgbRam(output reg [11:0] color,
     wire [11:0] charRgb4[7:0]; 
     wire [11:0] charRgb5[7:0]; 
 
-    // Instantiate CharRam สำหรับตัวอักษรแต่ละตัว
+    // Instantiate CharRam ??????????????????
     generate 
         for (genvar i = 0; i  <8; i = i + 1) begin
             CharRam charRam_inst_1(
@@ -58,7 +58,7 @@ module RgbRam(output reg [11:0] color,
     endgenerate
     
     always @(*) begin
-        // กำหนดพื้นหลังเป็นสีขาว
+        // ????????????????
         color = 12'b111111111111;
 
         if (y[9:2] >= START_CHAR_Y && y[9:2] < START_CHAR_Y + CHAR_HEIGHT) begin
@@ -66,47 +66,47 @@ module RgbRam(output reg [11:0] color,
                
                 for (integer i = 0; i < 8; i = i + 1) begin
                     if (x[9:2] >= START_CHAR_X + i * CHAR_WIDTH && x[9:2] < START_CHAR_X + (i + 1) * CHAR_WIDTH) begin
-                        color = charRgb[i];  // แสดงผลตัวอักษรที่ตรงกับตำแหน่ง x
+                        color = charRgb[i];  // ??????????๗??็??????? x
                     end
                 end
             end
         end
         else if (y[9:2] >= START_CHAR_Y+LINE_SPACE && y[9:2] < START_CHAR_Y+LINE_SPACE + CHAR_HEIGHT) begin
             if (x[9:2] >= START_CHAR_X && x[9:2] < START_CHAR_X + CHAR_WIDTH * 8) begin
-                // ตรวจสอบตำแหน่ง x และเลือกสีตามตำแหน่งของตัวอักษร
+                // ?????????? x ????????????????????????
                 for (integer i = 0; i < 8; i = i + 1) begin
                     if (x[9:2] >= START_CHAR_X + i * CHAR_WIDTH && x[9:2] < START_CHAR_X + (i + 1) * CHAR_WIDTH) begin
-                        color = charRgb2[i];  // แสดงผลตัวอักษรที่ตรงกับตำแหน่ง x
+                        color = charRgb2[i];  // ??????????๗??็??????? x
                     end
                 end
             end
         end
         else if (y[9:2] >= START_CHAR_Y+LINE_SPACE*2 && y[9:2] < START_CHAR_Y+LINE_SPACE*2 + CHAR_HEIGHT) begin
             if (x[9:2] >= START_CHAR_X && x[9:2] < START_CHAR_X + CHAR_WIDTH * 8) begin
-                // ตรวจสอบตำแหน่ง x และเลือกสีตามตำแหน่งของตัวอักษร
+                // ?????????? x ????????????????????????
                 for (integer i = 0; i < 8; i = i + 1) begin
                     if (x[9:2] >= START_CHAR_X + i * CHAR_WIDTH && x[9:2] < START_CHAR_X + (i + 1) * CHAR_WIDTH) begin
-                        color = charRgb3[i];  // แสดงผลตัวอักษรที่ตรงกับตำแหน่ง x
+                        color = charRgb3[i];  // ??????????๗??็??????? x
                     end
                 end
             end
         end
         else if (y[9:2] >= START_CHAR_Y+LINE_SPACE*3 && y[9:2] < START_CHAR_Y+LINE_SPACE*3 + CHAR_HEIGHT) begin
             if (x[9:2] >= START_CHAR_X && x[9:2] < START_CHAR_X + CHAR_WIDTH * 8) begin
-                // ตรวจสอบตำแหน่ง x และเลือกสีตามตำแหน่งของตัวอักษร
+                // ?????????? x ????????????????????????
                 for (integer i = 0; i < 8; i = i + 1) begin
                     if (x[9:2] >= START_CHAR_X + i * CHAR_WIDTH && x[9:2] < START_CHAR_X + (i + 1) * CHAR_WIDTH) begin
-                        color = charRgb4[i];  // แสดงผลตัวอักษรที่ตรงกับตำแหน่ง x
+                        color = charRgb4[i];  // ??????????๗??็??????? x
                     end
                 end
             end
         end
         else if (y[9:2] >= START_CHAR_Y+LINE_SPACE*4 && y[9:2] < START_CHAR_Y+LINE_SPACE*4 + CHAR_HEIGHT) begin
             if (x[9:2] >= START_CHAR_X && x[9:2] < START_CHAR_X + CHAR_WIDTH * 8) begin
-                // ตรวจสอบตำแหน่ง x และเลือกสีตามตำแหน่งของตัวอักษร
+                // ?????????? x ????????????????????????
                 for (integer i = 0; i < 8; i = i + 1) begin
                     if (x[9:2] >= START_CHAR_X + i * CHAR_WIDTH && x[9:2] < START_CHAR_X + (i + 1) * CHAR_WIDTH) begin
-                        color = charRgb5[i];  // แสดงผลตัวอักษรที่ตรงกับตำแหน่ง x
+                        color = charRgb5[i];  // ??????????๗??็??????? x
                     end
                 end
             end
