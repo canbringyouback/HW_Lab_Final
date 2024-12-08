@@ -33,7 +33,8 @@ module vga_display(
     always @(negedge write_enable) begin
        
             if(char_in==8'h7F)begin //delete
-                buffer[index] <=8'b0;
+               
+                buffer[index-1] <=8'b0;
                 if (index>0) index <=index-1;
             end
             else if (char_in == 8'h0D || char_in == 8'h0A)begin //enter

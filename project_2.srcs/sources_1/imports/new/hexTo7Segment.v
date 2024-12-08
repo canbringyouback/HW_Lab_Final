@@ -95,7 +95,33 @@ module hexTo7Segment(
           8'h2D : segments = 7'b0111111;   // -
           8'h2E : segments = 7'b1101111;   // .
           8'h2F : segments = 7'b0101101;  // /
-          8'hB0 : segments = 7'b0011100;   //?
+          8'hB0 : segments = 7'b0011100;
+          8'h61 : segments = 7'b0100000;   // a (same as A)
+8'h62 : segments = 7'b0000011;   // b (same as B)
+8'h63 : segments = 7'b1000111;   // c
+8'h64 : segments = 7'b0100001;   // d (same as D)
+8'h65 : segments = 7'b0000110;   // e (same as E)
+8'h66 : segments = 7'b0001110;   // f (same as F)
+8'h67 : segments = 7'b1000010;   // g (same as G)
+8'h68 : segments = 7'b0001011;   // h (same as H)
+8'h69 : segments = 7'b1101110;   // i (same as I)
+8'h6A : segments = 7'b1110010;   // j (same as J)
+8'h6B : segments = 7'b0001010;   // k (same as K)
+8'h6C : segments = 7'b1000111;   // l (same as L)
+8'h6D : segments = 7'b0101010;   // m (same as M)
+8'h6E : segments = 7'b0101011;   // n (same as N)
+8'h6F : segments = 7'b0100011;   // o (same as O)
+8'h70 : segments = 7'b0001100;   // p (same as P)
+8'h71 : segments = 7'b0011000;   // q (same as Q)
+8'h72 : segments = 7'b0101111;   // r (same as R)
+8'h73 : segments = 7'b1010010;   // s (same as S)
+8'h74 : segments = 7'b0000111;   // t (same as T)
+8'h75 : segments = 7'b1100011;   // u (same as U)
+8'h76 : segments = 7'b1010101;   // v (same as V)
+8'h77 : segments = 7'b0010101;   // w (same as W)
+8'h78 : segments = 7'b1101011;   // x (same as X)
+8'h79 : segments = 7'b0010001;   // y (same as Y)
+8'h7A : segments = 7'b1100100;    //?
           default : segments = 7'b1000000;   // 0
       endcase
 				

@@ -14,7 +14,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24168 
+INFO: Helper process launched with PID 25540 
 WARNING: [Synth 8-2301] loop variable declaration is not allowed in this mode of verilog [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:67]
 WARNING: [Synth 8-2301] loop variable declaration is not allowed in this mode of verilog [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:77]
 WARNING: [Synth 8-2301] loop variable declaration is not allowed in this mode of verilog [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/RgbRam.v:87]
@@ -23,7 +23,7 @@ WARNING: [Synth 8-2301] loop variable declaration is not allowed in this mode of
 WARNING: [Synth 8-2611] redeclaration of ansi port clkdiv is not allowed [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/clockDiv.v:27]
 WARNING: [Synth 8-2611] redeclaration of ansi port segments is not allowed [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/hexTo7Segment.v:28]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 392.117 ; gain = 113.008
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 391.750 ; gain = 112.191
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top2' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:1]
 INFO: [Synth 8-6157] synthesizing module 'clockDiv' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/clockDiv.v:23]
@@ -168,7 +168,7 @@ WARNING: [Synth 8-6014] Unused sequential element uppercase_stable_reg was remov
 WARNING: [Synth 8-6014] Unused sequential element external_key_reg was removed.  [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_translate.v:66]
 WARNING: [Synth 8-6014] Unused sequential element caps_lock_reg was removed.  [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_translate.v:166]
 INFO: [Synth 8-6155] done synthesizing module 'uart_translate' (14#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new/uart_translate.v:1]
-WARNING: [Synth 8-350] instance 'echo_module2' of module 'uart_translate' requires 15 connections, but only 13 given [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:113]
+WARNING: [Synth 8-350] instance 'echo_module2' of module 'uart_translate' requires 15 connections, but only 13 given [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:119]
 INFO: [Synth 8-6157] synthesizing module 'quadSevenSeg' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:23]
 INFO: [Synth 8-6157] synthesizing module 'hexTo7Segment' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/hexTo7Segment.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'hexTo7Segment' (15#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/hexTo7Segment.v:23]
@@ -177,11 +177,9 @@ WARNING: [Synth 8-567] referenced signal 'num1' should be on the sensitivity lis
 WARNING: [Synth 8-567] referenced signal 'num2' should be on the sensitivity list [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:65]
 WARNING: [Synth 8-567] referenced signal 'num3' should be on the sensitivity list [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:65]
 INFO: [Synth 8-6155] done synthesizing module 'quadSevenSeg' (16#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/new/quadSevenSeg.v:23]
-WARNING: [Synth 8-689] width (9) of port connection 'num2' does not match port width (8) of module 'quadSevenSeg' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:142]
-WARNING: [Synth 8-689] width (9) of port connection 'num3' does not match port width (8) of module 'quadSevenSeg' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:142]
+WARNING: [Synth 8-689] width (9) of port connection 'num1' does not match port width (8) of module 'quadSevenSeg' [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:172]
 WARNING: [Synth 8-3848] Net tx in module/entity top2 does not have driver. [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:9]
 WARNING: [Synth 8-3848] Net led2 in module/entity top2 does not have driver. [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:15]
-WARNING: [Synth 8-3848] Net write_enable_count in module/entity top2 does not have driver. [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:142]
 INFO: [Synth 8-6155] done synthesizing module 'top2' (17#1) [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:1]
 WARNING: [Synth 8-3331] design uart_translate has unconnected port use_external_input
 WARNING: [Synth 8-3331] design uart_translate has unconnected port keyboard[7]
@@ -203,7 +201,7 @@ WARNING: [Synth 8-3331] design top2 has unconnected port sw[11]
 WARNING: [Synth 8-3331] design top2 has unconnected port sw[10]
 WARNING: [Synth 8-3331] design top2 has unconnected port sw[9]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 444.141 ; gain = 165.031
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 444.516 ; gain = 164.957
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -213,15 +211,14 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 WARNING: [Synth 8-3295] tying undriven pin vga_sync_unit:reset to constant 0 [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/imports/displayMonitor/project_1.srcs/sources_1/new/vga_display.v:13]
-WARNING: [Synth 8-3295] tying undriven pin q7seg:num0[0] to constant 0 [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/sources_1/new.v:142]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 444.141 ; gain = 165.031
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 444.516 ; gain = 164.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 444.141 ; gain = 165.031
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 444.516 ; gain = 164.957
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -232,30 +229,30 @@ Parsing XDC File [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/constrs_1/
 Finished Parsing XDC File [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/constrs_1/Basys3_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/constrs_1/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top2_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.398 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.441 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.215 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 788.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 788.441 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 788.441 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 788.215 ; gain = 509.105
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 788.441 ; gain = 508.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 788.215 ; gain = 509.105
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 788.441 ; gain = 508.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 788.215 ; gain = 509.105
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 788.441 ; gain = 508.883
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "buffer_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "buffer_reg[1]" won't be mapped to RAM because it is too sparse
@@ -297,6 +294,46 @@ INFO: [Synth 8-5546] ROM "buffer_reg[36]" won't be mapped to RAM because it is t
 INFO: [Synth 8-5546] ROM "buffer_reg[37]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "buffer_reg[38]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "buffer_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "buffer_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "O" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "running" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -402,7 +439,7 @@ INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because addres
 INFO: [Synth 8-5544] ROM "key_char0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 788.215 ; gain = 509.105
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 788.441 ; gain = 508.883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -415,8 +452,8 @@ Report RTL Partitions:
 |4     |RgbRam__GB3      |           1|     21800|
 |5     |RgbRam__GB4      |           1|     34954|
 |6     |RgbRam__GB5      |           1|      9228|
-|7     |vga_display__GC0 |           1|      2568|
-|8     |top2__GC0        |           1|      4743|
+|7     |vga_display__GC0 |           1|      2814|
+|8     |top2__GC0        |           1|      4774|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -442,12 +479,12 @@ Detailed RTL Component Info :
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 3     
 	                9 Bit    Registers := 2     
-	                8 Bit    Registers := 45    
-	                7 Bit    Registers := 2     
+	                8 Bit    Registers := 46    
+	                7 Bit    Registers := 3     
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 3     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 54    
+	                1 Bit    Registers := 58    
 +---Muxes : 
 	   3 Input     16 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 3     
@@ -458,12 +495,14 @@ Detailed RTL Component Info :
 	  51 Input      8 Bit        Muxes := 7     
 	   4 Input      8 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 203   
+	   4 Input      7 Bit        Muxes := 1     
 	   3 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 79    
 	   2 Input      4 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 186   
+	   2 Input      1 Bit        Muxes := 146   
+	   3 Input      1 Bit        Muxes := 40    
 	  12 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
@@ -477,7 +516,11 @@ Module top2
 Detailed RTL Component Info : 
 +---Registers : 
 	                9 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input      7 Bit        Muxes := 1     
 Module CharRam__1 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -673,7 +716,8 @@ Detailed RTL Component Info :
 	   3 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 161   
+	   2 Input      1 Bit        Muxes := 121   
+	   3 Input      1 Bit        Muxes := 40    
 Module clockDiv__1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -928,46 +972,46 @@ INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "buffer_reg[0]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[8]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[16]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[24]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[32]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[1]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[9]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[17]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[25]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[33]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[2]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[10]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[18]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[26]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[34]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[3]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[11]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[19]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[27]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[35]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[4]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[12]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[20]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[28]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[36]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[5]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[13]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[21]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[29]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[37]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[6]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[14]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[22]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[30]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[38]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[7]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[15]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[23]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[31]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "buffer_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "buffer_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "buffer_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "ps2_to_ascii_inst/uut/db_clk/count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ps2_to_ascii_inst/uut/db_clk/O" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ps2_to_ascii_inst/uut/db_data/count" won't be mapped to RAM because it is too sparse
@@ -987,10 +1031,17 @@ INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[3]
 INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[2]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[2]'
 INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[1]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[1]'
 INFO: [Synth 8-3886] merging instance 'i_0/ps2_to_ascii_inst/uut/dataprev_reg[0]' (FDE) to 'i_0/ps2_to_ascii_inst/uut/keycode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/display_data_reg[5]' (FDR) to 'i_0/display_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/display_data2_reg[4]' (FD) to 'i_0/display_data2_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/display_data_reg[2]' (FDR) to 'i_0/display_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/display_data_reg[1]' (FDS) to 'i_0/display_data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/display_data_reg[0]' (FDS) to 'i_0/display_data_reg[6]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/\display_data_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\display_data_reg[7] )
 INFO: [Synth 8-3886] merging instance 'i_0/echo_module2/transmitter/shift_reg[10]' (FDE) to 'i_0/echo_module2/transmitter/shift_reg[9]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/\echo_module2/transmitter/shift_reg[9] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:40 . Memory (MB): peak = 788.215 ; gain = 509.105
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:40 . Memory (MB): peak = 788.441 ; gain = 508.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1022,20 +1073,20 @@ Report RTL Partitions:
 |4     |RgbRam__GB3      |           1|      6159|
 |5     |RgbRam__GB4      |           1|      9307|
 |6     |RgbRam__GB5      |           1|      2250|
-|7     |vga_display__GC0 |           1|      1562|
-|8     |top2__GC0        |           1|      1211|
+|7     |vga_display__GC0 |           1|      1563|
+|8     |top2__GC0        |           1|      1108|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:47 . Memory (MB): peak = 951.406 ; gain = 672.297
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:01:47 . Memory (MB): peak = 952.785 ; gain = 673.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:50 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:50 . Memory (MB): peak = 1002.285 ; gain = 722.727
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1048,15 +1099,15 @@ Report RTL Partitions:
 |4     |RgbRam__GB3      |           1|      5164|
 |5     |RgbRam__GB4      |           1|      9219|
 |6     |RgbRam__GB5      |           1|      2250|
-|7     |vga_display__GC0 |           1|      1560|
-|8     |top2__GC0        |           1|      1192|
+|7     |vga_display__GC0 |           1|      1561|
+|8     |top2__GC0        |           1|      1076|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:55 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:01:55 . Memory (MB): peak = 1009.590 ; gain = 730.031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1080,7 +1131,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:56 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:01:56 . Memory (MB): peak = 1009.590 ; gain = 730.031
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1093,7 +1144,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:57 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:01:56 . Memory (MB): peak = 1009.590 ; gain = 730.031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1105,25 +1156,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:01:57 . Memory (MB): peak = 1009.590 ; gain = 730.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:01:57 . Memory (MB): peak = 1009.590 ; gain = 730.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:58 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:57 . Memory (MB): peak = 1009.590 ; gain = 730.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:58 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:01:57 . Memory (MB): peak = 1009.590 ; gain = 730.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1141,17 +1192,17 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     3|
 |2     |CARRY4 |   731|
-|3     |LUT1   |   583|
-|4     |LUT2   |  1661|
-|5     |LUT3   |   495|
+|3     |LUT1   |   584|
+|4     |LUT2   |  1659|
+|5     |LUT3   |   500|
 |6     |LUT4   |   181|
-|7     |LUT5   |   749|
-|8     |LUT6   |  6721|
-|9     |MUXF7  |  2104|
+|7     |LUT5   |   751|
+|8     |LUT6   |  6723|
+|9     |MUXF7  |  2109|
 |10    |MUXF8  |   917|
-|11    |FDRE   |   893|
+|11    |FDRE   |   905|
 |12    |FDSE   |     2|
-|13    |IBUF   |    17|
+|13    |IBUF   |    18|
 |14    |OBUF   |    28|
 |15    |OBUFT  |     2|
 +------+-------+------+
@@ -1160,7 +1211,7 @@ Report Instance Areas:
 +------+----------------------------------+---------------+------+
 |      |Instance                          |Module         |Cells |
 +------+----------------------------------+---------------+------+
-|1     |top                               |               | 15087|
+|1     |top                               |               | 15113|
 |2     |  display                         |vga_display    | 12073|
 |3     |    ram                           |RgbRam         |   510|
 |4     |      \genblk1[0].charRam_inst_2  |CharRam        |    44|
@@ -1176,7 +1227,7 @@ Report Instance Areas:
 |14    |      \genblk1[7].charRam_inst_2  |CharRam_28     |    40|
 |15    |      \genblk1[7].charRam_inst_5  |CharRam_29     |    41|
 |16    |    vga_sync_unit                 |vga_sync       | 10207|
-|17    |  echo_module2                    |uart_translate |   190|
+|17    |  echo_module2                    |uart_translate |   189|
 |18    |    receiver                      |uart_rx        |    84|
 |19    |    transmitter                   |uart_tx        |    62|
 |20    |  fdivTarget                      |clockDiv       |     2|
@@ -1198,36 +1249,36 @@ Report Instance Areas:
 |36    |  \genblk1[7].fDiv                |clockDiv_15    |     2|
 |37    |  \genblk1[8].fDiv                |clockDiv_16    |     2|
 |38    |  \genblk1[9].fDiv                |clockDiv_17    |     2|
-|39    |  nolabel_line110                 |singlePulser   |    18|
-|40    |  ps2_to_ascii_inst               |ps2_to_ascii   |   202|
+|39    |  nolabel_line116                 |singlePulser   |    19|
+|40    |  ps2_to_ascii_inst               |ps2_to_ascii   |   206|
 |41    |    uut                           |PS2Receiver    |    97|
 |42    |      db_clk                      |debouncer      |    21|
 |43    |      db_data                     |debouncer_18   |    22|
-|44    |  q7seg                           |quadSevenSeg   |    39|
+|44    |  q7seg                           |quadSevenSeg   |    42|
 |45    |    segDecode                     |hexTo7Segment  |    31|
 +------+----------------------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:58 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:57 . Memory (MB): peak = 1009.590 ; gain = 730.031
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:53 . Memory (MB): peak = 1000.613 ; gain = 377.430
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:01:58 . Memory (MB): peak = 1000.613 ; gain = 721.504
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:53 . Memory (MB): peak = 1009.590 ; gain = 386.105
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:58 . Memory (MB): peak = 1009.590 ; gain = 730.031
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3752 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3757 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1000.613 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1009.590 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-248 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
+295 Infos, 128 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:02:02 . Memory (MB): peak = 1000.613 ; gain = 733.258
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1000.613 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:02:02 . Memory (MB): peak = 1009.590 ; gain = 742.680
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1009.590 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/oatchula/Desktop/HWLabFinal/project_2.runs/synth_1/top2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top2_utilization_synth.rpt -pb top2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 23:09:24 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 23:57:03 2024...
