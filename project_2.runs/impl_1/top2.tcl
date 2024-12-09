@@ -70,12 +70,12 @@ set rc [catch {
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/oatchula/Desktop/HWLabFinal/project_2.cache/wt [current_project]
-  set_property parent.project_path C:/Users/oatchula/Desktop/HWLabFinal/project_2.xpr [current_project]
+  set_property webtalk.parent_dir C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.cache/wt [current_project]
+  set_property parent.project_path C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.xpr [current_project]
   set_property ip_output_repo {{C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/project_2/project_2.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/oatchula/Desktop/HWLabFinal/project_2.runs/synth_1/top2.dcp
-  read_xdc C:/Users/oatchula/Desktop/HWLabFinal/project_2.srcs/constrs_1/Basys3_Master.xdc
+  add_files -quiet C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.runs/synth_1/top2.dcp
+  read_xdc C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.srcs/constrs_1/Basys3_Master.xdc
   link_design -top top2 -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

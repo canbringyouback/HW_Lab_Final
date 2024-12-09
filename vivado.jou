@@ -2,11 +2,55 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Dec  5 09:24:09 2024
-# Process ID: 19024
-# Current directory: C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/New folder (6)/HWLabFinal
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16516 C:\Users\oatchula\Documents\Year 3 Term 1\HW LAB\New folder (6)\HWLabFinal\project_2.xpr
-# Log file: C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/New folder (6)/HWLabFinal/vivado.log
-# Journal file: C:/Users/oatchula/Documents/Year 3 Term 1/HW LAB/New folder (6)/HWLabFinal\vivado.jou
+# Start of session at: Mon Dec  9 10:03:29 2024
+# Process ID: 7552
+# Current directory: C:/Users/oatchula/Desktop/Newf/HW_Lab_Final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16416 C:\Users\oatchula\Desktop\Newf\HW_Lab_Final\project_2.xpr
+# Log file: C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/vivado.log
+# Journal file: C:/Users/oatchula/Desktop/Newf/HW_Lab_Final\vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target {localhost:3121/xilinx_tcf/Digilent/210183AA12E0A}
+set_property PROGRAM.FILE {C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.runs/impl_1/top2.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.runs/impl_1/top2.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.runs/impl_1/top2.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.runs/impl_1/top2.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.runs/impl_1/top2.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/oatchula/Desktop/Newf/HW_Lab_Final/project_2.runs/impl_1/top2.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

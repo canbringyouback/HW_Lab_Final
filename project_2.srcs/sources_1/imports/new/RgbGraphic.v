@@ -5,7 +5,7 @@ module RgbGraphic(
     localparam START_PIC_X = 0; 
     localparam START_PIC_Y = 20; 
     localparam PICS_WIDTH = 160; 
-    localparam PICS_HEIGHT = 25; 
+    localparam PICS_HEIGHT = 20; 
     
     wire [11:0] charRgb;
     GraphicRam3 graphRam_inst_1(
@@ -58,9 +58,10 @@ module GraphicRam2(output reg [11:0] color, input [7:0] x, y);
         if (x < PICS_WIDTH && y < PICS_HEIGHT)
             color = graphRom[y * PICS_WIDTH + x];
         else
-            color = 12'hbdd;  // ??????????๓? index ?????
+            color = 12'hbdd;  // สีเริ่มต้นในกรณี index นอกช่วง
     end
 endmodule
+
 module GraphicRam3(output reg [11:0] color, input [7:0] x, y);
     localparam PICS_WIDTH = 160;
     localparam PICS_HEIGHT = 25; 

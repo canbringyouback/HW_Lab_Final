@@ -38,6 +38,7 @@ module hexTo7Segment(
 
    always @(hex)
       case (hex)
+             8'h20 : segments = 7'b1111111;
           8'h41 : segments = 7'b0100000;   // A
           8'h42 : segments = 7'b0000011;   // B
           8'h43  : segments =7'b0100111; // C??????
@@ -96,7 +97,7 @@ module hexTo7Segment(
           8'h2E : segments = 7'b1101111;   // .
           8'h2F : segments = 7'b0101101;  // /
           8'hB0 : segments = 7'b0011100;
-          8'h61 : segments = 7'b0100000;   // a (same as A)
+           8'h61 : segments = 7'b0100000;   // a (same as A)
 8'h62 : segments = 7'b0000011;   // b (same as B)
 8'h63 : segments = 7'b1000111;   // c
 8'h64 : segments = 7'b0100001;   // d (same as D)
@@ -121,7 +122,7 @@ module hexTo7Segment(
 8'h77 : segments = 7'b0010101;   // w (same as W)
 8'h78 : segments = 7'b1101011;   // x (same as X)
 8'h79 : segments = 7'b0010001;   // y (same as Y)
-8'h7A : segments = 7'b1100100;    //?
+8'h7A : segments = 7'b1100100;   //?
           default : segments = 7'b1000000;   // 0
       endcase
 				

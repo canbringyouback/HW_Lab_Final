@@ -42,15 +42,9 @@ module top2 (
     wire [8:0] O;
     wire an0,an1,an2,an3;
     reg [8:0] O1=0;
-  reg s15, s14, s13, s12;  // Declare as reg
-    assign an = {an3, an2, an1, an0};  // Combine the an signals
+    
+    assign an={an3,an2,an1,an0};
 
-    always @(posedge clk) begin
-        s15 <= sw[15];  // Capture the value of sw[15]
-        s14 <= sw[14];  // Capture the value of sw[14]
-        s13 <= sw[13];  // Capture the value of sw[13]
-        s12 <= sw[12];  // Capture the value of sw[12]
-    end
         wire targetClk;
     wire [18:0] tclk;
     
@@ -141,6 +135,13 @@ always @(posedge clk) begin
     end  
     end
     
+  reg s15, s14, s13, s12;  
+    always @(posedge clk) begin
+        s15 <= sw[15];  // Capture the value of sw[15]
+        s14 <= sw[14];  // Capture the value of sw[14]
+        s13 <= sw[13];  // Capture the value of sw[13]
+        s12 <= sw[12];  // Capture the value of sw[12]
+    end
   wire [7:0] ascii_k = 8'h4B; // ASCII for 'K'
     wire [7:0] ascii_s = 8'h53; // ASCII for 'S'
     wire [7:0] ascii_m = 8'h4D; // ASCII for 'M'
@@ -168,6 +169,7 @@ if (s15) begin
     display_data<=ascii_k;
     end
 end
+
           // Ready signal           // Ready signal feedback
 quadSevenSeg q7seg(seg,dp,an0,an1,an2,an3, sw[7:0],data_in,display_data,display_data2,targetClk);
 endmodule

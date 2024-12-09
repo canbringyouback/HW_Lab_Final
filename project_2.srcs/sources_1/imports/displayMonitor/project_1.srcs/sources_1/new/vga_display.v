@@ -28,12 +28,11 @@ module vga_display(
             buffer[i] = 8'b0; // Set each element to 0
         end
     end
-    
+    reg state=0;
+    reg [25:0] count;
     reg [5:0] index=0; 
     always @(negedge write_enable) begin
-       
             if(char_in==8'h7F)begin //delete
-               
                 buffer[index-1] <=8'b0;
                 if (index>0) index <=index-1;
             end
@@ -101,6 +100,7 @@ module vga_display(
         end
         $display("buffer[%0d] = %0d", index, buffer[index]); 
     end
+    
 
     
     reg [63:0] char_0;

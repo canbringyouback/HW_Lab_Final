@@ -14,6 +14,16 @@ module RgbRam(output reg [11:0] color,
 
 //    localparam START_CHAR_X = 27;
     localparam LINE_SPACE = 15;
+    
+    localparam START_PIC_X = 0; 
+    localparam START_PIC_Y = 100; 
+    localparam PICS_WIDTH = 160; 
+    localparam PICS_HEIGHT = 20; 
+    
+    localparam START_PIC_X_2 = 130; 
+    localparam START_PIC_Y_2 = 9; 
+    localparam PICS_WIDTH_2 = 22; 
+    localparam PICS_HEIGHT_2 = 22;
 
     wire [11:0] charRgb[7:0];
     wire [11:0] charRgb2[7:0]; 
@@ -57,9 +67,23 @@ module RgbRam(output reg [11:0] color,
         end
     endgenerate
     
+    wire [11:0] picRgb;
+    wire [11:0] picRgb2;
+    
+    GraphicRam graphRam_inst_1(
+        .color(picRgb),  
+        .x((x[9:2] >= START_PIC_X && x[9:2] < START_PIC_X + PICS_WIDTH) ? x[9:2] - START_PIC_X : 0),  
+        .y((y[9:2] >= START_PIC_Y && y[9:2] < START_PIC_Y + PICS_HEIGHT) ? y[9:2] - START_PIC_Y : 0)
+    );
+//    GraphicRam2 graphRam_inst_2(
+//        .color(picRgb2),  
+//        .x((x[9:2] >= START_PIC_X_2 && x[9:2] < START_PIC_X_2 + PICS_WIDTH_2) ? x[9:2] - START_PIC_X_2 : 0),  
+//        .y((y[9:2] >= START_PIC_Y_2 && y[9:2] < START_PIC_Y_2 + PICS_HEIGHT_2) ? y[9:2] - START_PIC_Y_2 : 0)
+//    ); 
+    
     always @(*) begin
         // ????????????????
-        color = 12'b111111111111;
+        color = 12'hbdd;
 
         if (y[9:2] >= START_CHAR_Y && y[9:2] < START_CHAR_Y + CHAR_HEIGHT) begin
             if (x[9:2] >= START_CHAR_X && x[9:2] < START_CHAR_X + CHAR_WIDTH * 8) begin
@@ -111,6 +135,16 @@ module RgbRam(output reg [11:0] color,
                 end
             end
         end
+        else if (x[9:2] >= START_PIC_X && x[9:2] < START_PIC_X + PICS_WIDTH &&
+            y[9:2] >= START_PIC_Y && y[9:2] < START_PIC_Y + PICS_HEIGHT) 
+        begin
+            color = picRgb;
+        end
+//        else if (x[9:2] >= START_PIC_X_2 && x[9:2] < START_PIC_X_2 + PICS_WIDTH_2 &&
+//            y[9:2] >= START_PIC_Y_2 && y[9:2] < START_PIC_Y_2 + PICS_HEIGHT_2) 
+//        begin
+//            color = picRgb2;
+//        end
     end
     
     
@@ -132,7 +166,7 @@ module CharRam(output reg [11:0] color, input [7:0] x, y, input [7:0] charIndex)
 
     always @(*) begin
         if (charIndex >= 128)  // Out of range for ASCII characters
-            color = 12'b111111111111;  // Default to white for out-of-range
+            color = 12'hbdd;  // Default to white for out-of-range
         else begin
             
             color = charRom[y * CHAR_WIDTH + x + charIndex * CHAR_WIDTH * CHAR_HEIGHT];

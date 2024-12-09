@@ -27,7 +27,7 @@ module uart_tx(
     output      tx    ,
     output      ready 
     );
-    parameter CD_MAX=108, CD_WIDTH=16;
+    parameter CD_MAX=10368, CD_WIDTH=16;
     reg [CD_WIDTH-1:0] cd_count=0;
     reg [3:0] count=0;
     reg running=0;

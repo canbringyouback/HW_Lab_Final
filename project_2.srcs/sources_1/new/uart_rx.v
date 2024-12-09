@@ -4,7 +4,7 @@ module uart_rx(
     output reg [7:0] data, // Received data byte
     output reg  ready      // Indicates data is ready
 );
-    parameter CD_MAX = 109; // Clock divider for baud rate (adjust as needed)
+    parameter CD_MAX = 10368; // Clock divider for baud rate (adjust as needed)
     reg [15:0] cd_count = 0;
     reg [3:0] bit_count = 0;
     reg [9:0] shift_reg = 10'b1111111111; // Start + 8 data + Stop

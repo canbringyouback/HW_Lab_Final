@@ -78,13 +78,13 @@ module uart_translate(
                     ready <= !ready;
                  end
                  else if(mirror)begin
-                  transmit_data <= external_key_char;
-                    buffer <= {ready, external_key_char};
+                  transmit_data <=external_key;
+                    buffer <= {ready, external_key};
                     start_tx <= 1'b1;
                     ready <= !ready;
                  end
                  else if(external) begin
-                    transmit_data <= external_key_char;
+                    transmit_data <= external_key;
                     start_tx <= 1'b1;
                  end // Toggle ready signal
                 end
@@ -164,7 +164,7 @@ module uart_translate(
     8'h66: key_char = 8'h7F;  // 'DEL' (Delete)
     8'h5A: key_char = 8'h0A;
     8'h58: caps_lock= ~ caps_lock;  // 'Enter' (Line feed)
-
+ 8'h29: key_char = 8'h20; 
     default: key_char = 8'h3F; // '?' for unmapped keys
 endcase
 
@@ -182,7 +182,7 @@ endcase
                     ready <= !ready;
                  end
                  else begin
-                    transmit_data = key_char;
+                    transmit_data <= key_char;
                 
                     start_tx <= 1'b1;   
                  end // Tog
